@@ -22,5 +22,8 @@ function App() {
     );
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/test-dev
 export default App;
