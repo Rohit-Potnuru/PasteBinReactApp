@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/pastebin/static/css/main.0fc0e0c7.css",
-    "main.js": "/pastebin/static/js/main.c0a8fac7.js",
-    "index.html": "/pastebin/index.html",
-    "main.0fc0e0c7.css.map": "/pastebin/static/css/main.0fc0e0c7.css.map",
-    "main.c0a8fac7.js.map": "/pastebin/static/js/main.c0a8fac7.js.map"
+    "main.css": "/PasteBinReactApp/static/css/main.0fc0e0c7.css",
+    "main.js": "/PasteBinReactApp/static/js/main.4b434b71.js",
+    "index.html": "/PasteBinReactApp/index.html",
+    "main.0fc0e0c7.css.map": "/PasteBinReactApp/static/css/main.0fc0e0c7.css.map",
+    "main.4b434b71.js.map": "/PasteBinReactApp/static/js/main.4b434b71.js.map"
   },
   "entrypoints": [
     "static/css/main.0fc0e0c7.css",
-    "static/js/main.c0a8fac7.js"
+    "static/js/main.4b434b71.js"
   ]
 }
