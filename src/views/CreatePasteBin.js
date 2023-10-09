@@ -32,7 +32,7 @@ export async function savePaste(content) {
             const registerResponse = await callRegisterAPI(registerAPIRequestData);
             await uploadToS3(registerResponse.accessURL, content);
             await registerConfirmation(registerResponse.pasteBinId);
-            window.location.href = `/${registerResponse.pasteBinId}`;
+            window.location.href = `${window.location.pathname}/${registerResponse.pasteBinId}`;
         } catch (error) {
             console.error('Error in savePaste:', error.message);
         }

@@ -14,8 +14,8 @@ function App() {
         <Router>
             <div className="App">
                 <Routes>
-                    <Route path="/" element={<CreatePasteBin />} />
-                    <Route path="/:id" element={<ViewPaste />} />
+                    <Route path="/pastebin" element={<CreatePasteBin />} />
+                    <Route path="/pastebin/:id" element={<ViewPaste />} />
                 </Routes>
             </div>
         </Router>
