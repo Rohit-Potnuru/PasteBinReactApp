@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import {
-  Link,
-  useParams
-} from 'react-router-dom';
-import React, { useState, useEffect } from 'react';
-=======
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { savePaste, uploadToS3 } from './CreatePasteBin';
@@ -18,13 +11,13 @@ export async function getData(id) {
         return pasteBinData.data;
     } catch (error) {
         console.error('Error fetching data from s3:', error);
-        return null; // Handle errors 
+        return null; // Handle errors
     }
 }
 
 export async function updateConfirmation(pasteBinId) {
     const updateConfirmAPIRequestData = {
-        userId: 'Sreeja',
+        userId: 'Guest',
         pasteBinId: pasteBinId
     };
     const response = await updateConfirmAPI(updateConfirmAPIRequestData);
@@ -41,7 +34,7 @@ export async function updatePaste(content, id) {
                 contentType: 'application/json',
                 expiryTime: 0,
                 pasteBinId: id,
-                userId: 'Sreeja',
+                userId: 'Guest',
             };
             const updateAPIResponseData = await callUpdateDataAPI(updateAPIRequestData);
             console.log('Update API Response:', updateAPIResponseData);
@@ -51,30 +44,18 @@ export async function updatePaste(content, id) {
             await updateConfirmation(updateAPIResponseData.pasteBinId);
 
             window.location.href = `/${updateAPIResponseData.pasteBinId}`;
-            
+
         } catch (error) {
             console.error('Error in savePaste:', error.message);
         }
     }
 };
->>>>>>> origin/test-dev
 
 function ViewPaste() {
     const { id } = useParams();
     const [content, setContent] = useState('');
 
     useEffect(() => {
-<<<<<<< HEAD
-        const storedContent = localStorage.getItem(id);
-        if (storedContent) {
-            setContent(storedContent);
-        }
-    }, [id]);
-
-    return (
-        <div>
-            <pre>{content}</pre>
-=======
         const fetchData = async () => {
             const storedContent = await getData(id);
             if (storedContent) {
@@ -106,7 +87,6 @@ function ViewPaste() {
             <button onClick={handleUpdate}>Update</button>
             <br />
             <br />
->>>>>>> origin/test-dev
             <Link to="/">Create New Paste</Link>
         </div>
     );
